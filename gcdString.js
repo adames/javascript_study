@@ -29,4 +29,3 @@ console.log(gcdOfStrings(example1.key, example1.value));
 console.log(gcdOfStrings(example2.key, example2.value));
 console.log(gcdOfStrings(example3.key, example3.value));
 
-
