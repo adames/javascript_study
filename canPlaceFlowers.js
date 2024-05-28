@@ -15,16 +15,16 @@ var canPlaceFlowers = function(flowerbed, n) {
         } else {
             let canPlot = true;
             if (i != 0 && flowerbed[i - 1] != 0) {
-                canPlot = false
+                canPlot = false;
             }
             if (i < flowerbed.length - 1
                     && flowerbed[i + 1] != 0) {
-                canPlot = false
+                canPlot = false;
             }
             canPlotList.push(canPlot);
             if (i < flowerbed.length - 1) {
                 canPlotList.push(false)
-                i += 1
+                i += 1;
             }
         }
     }
