@@ -1,21 +1,22 @@
 let nums = [2,7,11,15];
 let target = 9;
+let solution = [];
 
 var twoSum = function(nums, target) {
     let map = new Map();
     for (let i = 0; i < nums.length; i++) {
         let num1 = nums[i];
         let num2 = target - nums[i];
+
         if (map.has(num2)) {
-            return [i, map.get(num2)]
+            solution = [num1, num2];
         }
         map.set(num1, i)
     }
+    console.log(solution)
 };
 
 twoSum(nums, target);
-
-
 
 
 // 1. Two Sum
