@@ -6,15 +6,15 @@ var findMin = function(nums) {
     if (nums.length === 1) return nums[0];
 
     while (left < right) {
-        let midpoint = left + (right - left) / 2;
+        let midpoint = Math.floor((left + right) / 2);
         if (midpoint > 0 && nums[midpoint] < nums[midpoint - 1]) {
             return nums[midpoint];
-        } else if (nums[left] <= nums[midpoint] && nums[midpoint] > nums[right]) {
-            // solution on left
-            right = midpoint;
-        } else {
+        } else if (nums[right] < nums[midpoint]) {
             //solution on right
             left = midpoint + 1;
+        } else {
+            right = midpoint;
+            
         }
     }
     return nums[left];
