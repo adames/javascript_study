@@ -4,4 +4,8 @@ if (process.argv.length > 2) {
     sentence = process.argv.slice(2).join(" ");
 }
 
-console.log(reverseSentence(sentence));
+let function sentenceBackwards(sentence) {
+}
+
+
+console.log(sentenceBackwards(sentence));
