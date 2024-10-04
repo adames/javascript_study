@@ -5,6 +5,7 @@ if (process.argv.length > 2) {
 }
 let newSplit= [];
 function reverseSentence(sentence) {
+    console.log(newSplit);
     let newSplit = sentence.split(" ");
     for (let index = newSplit.length - 1; index >= 0; index--) {
         reversedSentence.push(newSplit[index]);
