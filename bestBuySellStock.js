@@ -13,7 +13,7 @@ var maxProfit = function(prices) {
     return profit;
 };
 
-let prices = [7,1,5,3,6,4]; // 5
+let prices = [9,1,3,2,6,4]; 
 console.log(maxProfit(prices));
 
 // 121. Best Time to Buy and Sell Stock
