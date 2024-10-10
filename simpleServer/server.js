@@ -28,17 +28,20 @@ http.createServer((req, res) => {
     }
 
     if (stats.isFile()) {
+        console.log("isFile");
         let mimeType = mimeTypes[path.extname(fileName).split(".").reverse()[0]];
         res.writeHead(200, {'Content-type': mimeType})
 
         let filesStream = fs.createReadStream(fileName);
         filesStream.pipe(res);
     } else if (fs.stats.isDirectory()) {
+        console.log("isDirectory");
         res.writeHead(302, {
             'Location': 'index.html'
         });
         res.end();
     } else {
+        console.log("isNeither");
         res.writeHead(500, {'Content-type': 'text/plain'});
         res.write('500 Internal Error\n');
         res.end();
