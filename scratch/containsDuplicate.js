@@ -1,11 +1,11 @@
 
-var containsDuplicate = function(nums) {
+const containsDuplicate = (nums) => {
     let htable = {};
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] in htable) {
+    for (const element of nums) {
+        if (element in htable) {
             return true;
         } else {
-            htable[nums[i]] = 1
+            htable[element] = 1
         }
     }
     return false;
