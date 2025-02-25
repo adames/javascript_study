@@ -67,9 +67,10 @@ const convert = function (s, numRows) {
         down ? count++ : count--;
     }
 
+
     return solution.join("");
 };
 
-convert(testInput1, numRows1)
-convert(testInput2, numRows2)
-convert(testInput3, numRows3)
+console.log(convert(testInput1, numRows1)=== success1)
+console.log(convert(testInput2, numRows2)=== success2)
+console.log(convert(testInput3, numRows3) === success3)
