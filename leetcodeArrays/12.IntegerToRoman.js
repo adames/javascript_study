@@ -73,34 +73,32 @@ let intToRoman = function(num) {
 
     let romanAnswer = ""
 
-    let romanNumeralsMap = {
-        1: "I",
-        4: "IV",
-        5: "V",
-        9: "IX",
-        10: "X",
-        40: "XL",
-        50: "L",
-        90: "XC",
-        100: "C",
-        400: "CD",
-        500: "D",
-        900: "CM",
-        1000: "M"
-        
-    }
+    let map = new Map();
+        map.set(1, "I")
+        map.set(4, "IV")
+        map.set(5, "V")
+        map.set(9, "IX")
+        map.set(10, "X")
+        map.set(40, "XL")
+        map.set(50, "L")
+        map.set(90, "XC")
+        map.set(100, "C")
+        map.set(400, "CD")
+        map.set(500, "D")
+        map.set(900, "CM")
+        map.set(1000, "M")
 
-    let romanNumeralsArray = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
+    let romanNumeralsArray = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
 
-    for (let i = 0; i < num.length; i++) {
-        while (romanNumeralsArray[i] <= adjustedNum) {
-            romanAnswer += romanNumeralsMap.get(romanNumeralsArray[i])
-            num -= array[i];
+    for (let i = 0; i < romanNumeralsArray.length; i++) {
+        while (romanNumeralsArray[i] <= num) {
+            romanAnswer += map.get(romanNumeralsArray[i])
+            num -= romanNumeralsArray[i];
         }
     }
 
     return romanAnswer
-};
+}
 
 
 // test 1
