@@ -41,14 +41,35 @@
 // Let's first make a few examples a tests  
 
 // example 1
-let testInput = 'PAYPALISHIRING'
-let numRows = 3
-let success = 'PAHNAPLSIIGYIR'
+let testInput1 = 'PAYPALISHIRING'
+let numRows1 = 3
+let success1 = 'PAHNAPLSIIGYIR'
 // example 2
-let testInput = 'PAYPALISHIRING'
-let numRows = 4
-let success = 'PINALSIGYAHRPI'
+let testInput2 = 'PAYPALISHIRING'
+let numRows2 = 4
+let success2 = 'PINALSIGYAHRPI'
 // example 3
-let testInput = 'A'
-let numRows = 1
-let success = 'A'
+let testInput3 = 'A'
+let numRows3 = 1
+let success3 = 'A'
+
+//solution
+const convert = function (s, numRows) {
+    let down = false;
+    let solution = new Array(numRows).fill("");
+    let count = 0;
+
+    if (numRows === 1 || s.length < numRows) return s;
+
+    for (const letter of s) {
+        solution[count] += letter;
+        if (count === 0 || count >= numRows - 1) down = !down;
+        down ? count++ : count--;
+    }
+
+    return solution.join("");
+};
+
+convert(testInput1, numRows1)
+convert(testInput2, numRows2)
+convert(testInput3, numRows3)
