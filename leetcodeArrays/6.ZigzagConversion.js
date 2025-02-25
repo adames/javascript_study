@@ -36,3 +36,19 @@
 // 1 <= s.length <= 1000
 // s consists of English letters (lower-case and upper-case), ',' and '.'.
 // 1 <= numRows <= 1000
+
+// OK my brute force though is to use Modulo somehow since we're dividing up a string into new parts
+// Let's first make a few examples a tests  
+
+// example 1
+let testInput = 'PAYPALISHIRING'
+let numRows = 3
+let success = 'PAHNAPLSIIGYIR'
+// example 2
+let testInput = 'PAYPALISHIRING'
+let numRows = 4
+let success = 'PINALSIGYAHRPI'
+// example 3
+let testInput = 'A'
+let numRows = 1
+let success = 'A'
