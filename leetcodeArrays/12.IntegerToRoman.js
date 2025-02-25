@@ -92,13 +92,38 @@ let intToRoman = function(num) {
 
     let romanNumeralsArray = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
 
-    for (let i = 0; i < adjustedNum.length; i++) {
+    for (let i = 0; i < num.length; i++) {
         while (romanNumeralsArray[i] <= adjustedNum) {
             romanAnswer += romanNumeralsMap.get(romanNumeralsArray[i])
             num -= array[i];
         }
     }
 
-    return stringRoman
+    return romanAnswer
 };
 
+
+// test 1
+// Input: num = 3749
+// Output: "MMMDCCXLIX"
+console.log("input: " + 3749)
+console.log("expected output: MMMDCCXLIX")
+console.log("output: " + intToRoman(3749))
+console.log(intToRoman(3749) === "MMMDCCXLIX")
+
+
+// test 2
+// Input: num = 58
+// Output: "LVIII"
+console.log("input: " + 58)
+console.log("expected output: LVIII")
+console.log("output: " + intToRoman(58))
+console.log(intToRoman(58) === "LVIII")
+
+// test 3
+// Input: num = 1994
+// Output: "MCMXCIV"
+console.log("input: " + 1994)
+console.log("expected output: MCMXCIV")
+console.log("output: " + intToRoman(1994))
+console.log(intToRoman(1994) === "MCMXCIV")
