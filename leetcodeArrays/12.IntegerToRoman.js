@@ -64,3 +64,41 @@
 
 // 1 <= num <= 3999
 
+/**
+ * @param {number} num
+ * @return {string}
+ */
+
+let intToRoman = function(num) {
+
+    let romanAnswer = ""
+
+    let romanNumeralsMap = {
+        1: "I",
+        4: "IV",
+        5: "V",
+        9: "IX",
+        10: "X",
+        40: "XL",
+        50: "L",
+        90: "XC",
+        100: "C",
+        400: "CD",
+        500: "D",
+        900: "CM",
+        1000: "M"
+        
+    }
+
+    let romanNumeralsArray = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
+
+    for (let i = 0; i < adjustedNum.length; i++) {
+        while (romanNumeralsArray[i] <= adjustedNum) {
+            romanAnswer += romanNumeralsMap.get(romanNumeralsArray[i])
+            num -= array[i];
+        }
+    }
+
+    return stringRoman
+};
+
