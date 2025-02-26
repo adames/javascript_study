@@ -90,10 +90,10 @@ let intToRoman = function(num) {
 
     let romanNumeralsArray = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
 
-    for (const numKey of romanNumeralsArray) {
-        while (numKey <= num) {
-            romanAnswer += map.get(numKey)
-            num -= numKey;
+    for (let i = 0; i < romanNumeralsArray.length; i++) {
+        while (romanNumeralsArray[i] <= num) {
+            romanAnswer += map.get(romanNumeralsArray[i])
+            num -= romanNumeralsArray[i];
         }
     }
 
