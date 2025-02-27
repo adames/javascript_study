@@ -42,3 +42,45 @@
 // 1 <= s.length <= 15
 // s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 // It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+
+// plans
+// OK, this is the opposite of the other. My guess is to do the same as before, but this time we're 
+// creating an amount and pulling off letters from the roman numeral string. 
+
+// first, let's create the function, add the map. 
+function romanToInteger(romanNumeralString) {
+    let map = new Map();
+    map.set(1, "I")
+    map.set(4, "IV")
+    map.set(5, "V")
+    map.set(9, "IX")
+    map.set(10, "X")
+    map.set(40, "XL")
+    map.set(50, "L")
+    map.set(90, "XC")
+    map.set(100, "C")
+    map.set(400, "CD")
+    map.set(500, "D")
+    map.set(900, "CM")
+    map.set(1000, "M")
+    return 0;
+}
+
+let example1Input = "III"
+let example1Output = 3
+let example2Input = "LVIII"
+let example2Output = 58
+let example3Input = "MCMXCIV"
+let example3Output = 1994
+
+console.log('example 1 input = ' + example1Input)
+console.log('example 1 expected output = ' + example1Output)
+console.log('example 1 output = ' + romanToInteger(example1Input))
+
+console.log('example 2 input = ' + example2Input)
+console.log('example 2 expected output = ' + example2Output)
+console.log('example 2 output = ' + romanToInteger(example2Input))
+
+console.log('example 3 input = ' + example3Input)
+console.log('example 3 expected output = ' + example3Output)
+console.log('example 3 output = ' + romanToInteger(example3Input))
