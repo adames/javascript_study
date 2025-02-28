@@ -50,20 +50,47 @@
 // first, let's create the function, add the map. 
 function romanToInteger(romanNumeralString) {
     let map = new Map();
-    map.set(1, "I")
-    map.set(4, "IV")
-    map.set(5, "V")
-    map.set(9, "IX")
-    map.set(10, "X")
-    map.set(40, "XL")
-    map.set(50, "L")
-    map.set(90, "XC")
-    map.set(100, "C")
-    map.set(400, "CD")
-    map.set(500, "D")
-    map.set(900, "CM")
-    map.set(1000, "M")
+    map.set("I", 1)
+    map.set("IV", 4)
+    map.set("V", 5)
+    map.set("IX", 9)
+    map.set("X", 10)
+    map.set("XL", 40)
+    map.set("L", 50)
+    map.set("XC", 90)
+    map.set("C", 100)
+    map.set("CD", 400)
+    map.set("D", 500)
+    map.set("CM", 900)
+    map.set("M", 1000)
+    
     return 0;
+}
+
+function stringToNumber(letters) {
+    switch (letter) {
+        case 'I':
+            // if IV, remove one more character and return mapped amount
+            // if IX, remove one more character and return mapped amount
+            break;
+        case 'V':
+            break;
+        case 'X':
+            // if XL, remove one more character and return mapped amount
+            // if XC, remove one more character and return mapped amount
+            break;
+        case 'L':
+            break;
+        case 'C':
+            // if CD, remove one more character and return mapped amount
+            // if CM, remove one more character and return mapped amount
+            break;
+        case 'D':
+            break;
+        case 'M':
+            break;
+
+    }
 }
 
 // TESTING
