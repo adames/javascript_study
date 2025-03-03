@@ -68,6 +68,7 @@ function romanToInteger(romanNumeralString) {
 }
 
 function stringToNumber(letters) {
+    while (letters)
     switch (letter) {
         case 'I':
             // if IV, remove one more character and return mapped amount
