@@ -40,7 +40,7 @@
  * @return {boolean[]}
  */
 
-var kidsWithCandies = function(candies, extraCandies) {
+let kidsWithCandies = function(candies, extraCandies) {
     let maxValue = 0;
     let maxCandies = candies.map(candy => {
         maxValue = Math.max(candy, maxValue);
